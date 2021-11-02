@@ -1,0 +1,9 @@
+{
+  "name": "com.xidostudio.controltemps",
+  "version": "1.0.0-preview.1",
+  "displayName": "XS_ControlTemps",
+  "type": "tool",
+  "dependencies": {
+    "com.xidostudio.utils": "1.0.0"
+  }
+}
