@@ -34,7 +34,7 @@ public static class ControlTemps
         objectiu = _objectiu;
         velocitat = _velocitat;
 
-        Corrutina.While(ProperAObjectiu, CanviarTemps);
+        XS_Coroutine.StartCoroutine(ProperAObjectiu, CanviarTemps);
         /*CrearGestor(objectiu);
         if (ControlTemps_Gestor.Instance == null)
             return;
@@ -65,14 +65,14 @@ public static class ControlTemps
     public static void Pausar(float tempsPausat)
     {
         Time.timeScale = 0;
-        Corrutina.Iniciar(tempsPausat, () => Time.timeScale = 1);
+        XS_Coroutine.StartCoroutine(tempsPausat, TimeScaleEqualsOne);
         /*CrearGestor(-1);
         if (ControlTemps_Gestor.Instance == null)
             return;
 
         ControlTemps_Gestor.Instance.Pausar(temps);*/
     }
-
+    static void TimeScaleEqualsOne() => Time.timeScale = 1;
     /*static void CrearGestor(float objectiu)
     {
         if (objectiu == Time.timeScale)
