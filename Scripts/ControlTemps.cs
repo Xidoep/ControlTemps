@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XS_Utils;
+//using XS_Utils;
 
 //[CreateAssetMenu(menuName = "Xido Studio/ControlTemps", fileName = "ControlTemps")]
 public static class ControlTemps
@@ -34,7 +34,7 @@ public static class ControlTemps
         objectiu = _objectiu;
         velocitat = _velocitat;
 
-        XS_Coroutine.StartCoroutine(ProperAObjectiu, CanviarTemps);
+        //XS_Coroutine.StartCoroutine(ProperAObjectiu, CanviarTemps);
         /*CrearGestor(objectiu);
         if (ControlTemps_Gestor.Instance == null)
             return;
@@ -65,7 +65,7 @@ public static class ControlTemps
     public static void Pausar(float tempsPausat)
     {
         Time.timeScale = 0;
-        XS_Coroutine.StartCoroutine(tempsPausat, TimeScaleEqualsOne);
+        //XS_Coroutine.StartCoroutine(tempsPausat, TimeScaleEqualsOne);
         /*CrearGestor(-1);
         if (ControlTemps_Gestor.Instance == null)
             return;
